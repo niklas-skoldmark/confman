@@ -46,7 +46,7 @@
 			<key>MCX</key>
 			<dict>
 				<key>Description</key>
-				<string></string>
+				<string>testdesc mcx</string>
 				<key>Domain</key>
 				<string></string>
 				<key>Lookup</key>
@@ -65,7 +65,7 @@
 			<key>Plist</key>
 			<dict>
 				<key>Description</key>
-				<string></string>
+				<string>testdesc plist</string>
 				<key>Domain</key>
 				<string></string>
 				<key>Lookup</key>
