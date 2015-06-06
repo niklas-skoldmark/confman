@@ -10,7 +10,7 @@
 			<key>ConfigurationProfilePayload</key>
 			<dict>
 				<key>Description</key>
-				<string></string>
+				<string>testdesc confman</string>
 				<key>Domain</key>
 				<string></string>
 				<key>Lookup</key>
