@@ -4,6 +4,13 @@
 <dict>
 	<key>Children</key>
 	<string>ChildrenValue</string>
+	<key>dictionary</key>
+	<dict>
+		<key>child1</key>
+		<string>barnett</string>
+		<key>child2</key>
+		<string>barn2</string>
+	</dict>
 	<key>lastkey</key>
 	<string>lastkey value</string>
 	<key>nextkey</key>
