@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>pfm_description</key>
+	<string>A Manifest that describes: Manifest, LaunchDaemons, users and groups</string>
+	<key>pfm_subkeys</key>
+	<array>
+		<dict>
+			<key>pfm_description</key>
+			<string>A Manifest that describes the Manifest-type</string>
+			<key>pfm_name</key>
+			<string>manifest</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_default</key>
+					<string>If this key is not specified, the value of pfm_domain specified in the outermost dictionary is used.</string>
+					<key>pfm_description</key>
+					<string>Specifies the application domain for this preference key. This manifest key is only valid in the outermost dictionary and in direct pfm_subkey definitions. For additional information, see the section Using the pfm_domain Key.</string>
+					<key>pfm_name</key>
+					<string>pfm_domain</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<string>1.0</string>
+					<key>pfm_description</key>
+					<string>Specifies the preference manifest format version. This manifest key is only valid in the outermost dictionary.</string>
+					<key>pfm_name</key>
+					<string>pfm_format_version</string>
+					<key>pfm_type</key>
+					<string>real</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<string></string>
+					<key>pfm_description</key>
+					<string>Specifies the name of a preference key. This key is required for all keys except the subkeys of an array.</string>
+					<key>pfm_name</key>
+					<string>pfm_name</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<string>Value of the pfm_targets key specified in the next level up or user if the pfm_targets key is not specified in the next level up.</string>
+					<key>pfm_description</key>
+					<string>Specifies values that indicate when a preference is to be processed. Possible values are user, user-managed, and system-managed. For additional information, see </string>
+					<key>pfm_name</key>
+					<string>pfm_targets</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>user</string>
+						<string>system-managed</string>
+						<string>user-managed</string>
+					</array>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<string>Value of the pfm_name key.</string>
+					<key>pfm_description</key>
+					<string>Specifies the title of the preference, which is displayed by the Workgroup Manager’s Preference Manifest Editor. This key is optional, and if not specified, the Workgroup Manager’s Preference Manifest Editor displays the value of the pfm_name key as the title. See the section Localization for additional information about specifying the value of this key.</string>
+					<key>pfm_name</key>
+					<string>pfm_title</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<string>{pfm_name}</string>
+					<key>pfm_description</key>
+					<string>Specifies the input key names for a union policy manifest key. For additional information, see the section</string>
+					<key>pfm_name</key>
+					<string>pfm_upk_input_keys</string>
+					<key>pfm_type</key>
+					<string>array of strings</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<string></string>
+					<key>pfm_description</key>
+					<string>Specifies the output key name for a union policy manifest key.</string>
+					<key>pfm_name</key>
+					<string>pfm_upk_output_name</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<string>false</string>
+					<key>pfm_description</key>
+					<string>Specifies whether to replace user preferences with the output of a union policy.</string>
+					<key>pfm_name</key>
+					<string>pfm_upk_output_replace</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<string>array</string>
+					<key>pfm_description</key>
+					<string>For union policy manifest keys, specifies whether to output an array or a dictionary. Use array to output an array or dictionary to output a dictionary.</string>
+					<key>pfm_name</key>
+					<string>pfm_upk_output_type</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<string>false</string>
+					<key>pfm_description</key>
+					<string>Specifies whether to remove duplicate keys when a union policy results in a combination of keys that contains duplicates.</string>
+					<key>pfm_name</key>
+					<string>pfm_upk_remove_duplicates</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<string>1.0</string>
+					<key>pfm_description</key>
+					<string>Specifies the version of this preference manifest file. Increment this value to override previous version numbers. This manifest key is valid in the outermost dictionary only.</string>
+					<key>pfm_name</key>
+					<string>pfm_version</string>
+					<key>pfm_type</key>
+					<string>real</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<string>{}</string>
+					<key>pfm_description</key>
+					<string>Specifies that nested manifest keys follow. This key is optional and is only used for manifest keys that are dictionaries or arrays.</string>
+					<key>pfm_name</key>
+					<string>pfm_subkeys</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_default</key>
+							<string>0, false, {}, ““, etc.</string>
+							<key>pfm_description</key>
+							<string>Specifies the preference key’s default value.</string>
+							<key>pfm_name</key>
+							<string>pfm_default</string>
+							<key>pfm_type</key>
+							<string>Same as the data type of the pfm_type key.</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>""</string>
+							<key>pfm_description</key>
+							<string>Specifies a description of the preference key. This manifest key is optional. See the section Localization for additional information about specifying the value of this key.</string>
+							<key>pfm_name</key>
+							<string>pfm_description</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>If this key is not specified, the value of pfm_domain specified in the outermost dictionary is used.</string>
+							<key>pfm_description</key>
+							<string>Specifies the application domain for this preference key. This manifest key is only valid in the outermost dictionary and in direct pfm_subkey definitions. For additional information, see the section Using the pfm_domain Key.</string>
+							<key>pfm_name</key>
+							<string>pfm_domain</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string></string>
+							<key>pfm_description</key>
+							<string>Specifies the name of a preference key. This key is required for all keys except the subkeys of an array.</string>
+							<key>pfm_name</key>
+							<string>pfm_name</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>{}</string>
+							<key>pfm_description</key>
+							<string>Specifies an array of legal values for this preference key, if applicable. This key is optional and if not specified, any values are allowed or any values within the range specified by pfm_range_min and pfm_range_max, if specified, are allowed.</string>
+							<key>pfm_name</key>
+							<string>pfm_range_list</string>
+							<key>pfm_type</key>
+							<string>Array of values having the same data type as specified by the pfm_type key.</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>+&lt;infinity&gt;</string>
+							<key>pfm_description</key>
+							<string>Specifies the maximum value for this preference key. This key is optional.</string>
+							<key>pfm_name</key>
+							<string>pfm_range_max</string>
+							<key>pfm_type</key>
+							<string>Same as the data type specified by the pfm_type key.</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>-&lt;infinity&gt;</string>
+							<key>pfm_description</key>
+							<string>Specifies the minimum value for this preference key. This key is optional.</string>
+							<key>pfm_name</key>
+							<string>pfm_range_min</string>
+							<key>pfm_type</key>
+							<string>Same as the data type specified by the pfm_type key.</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<integer>1</integer>
+							<key>pfm_description</key>
+							<string>Specifies the maximum number of times this preference key can be repeated. Values greater than one are only valid for preference keys that are arrays. Use –1 to specify unlimited repetition. This key is optional.</string>
+							<key>pfm_name</key>
+							<string>pfm_repetition_max</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<integer>0</integer>
+							<key>pfm_description</key>
+							<string>Specifies the minimum number of times this preference key must be repeated. Values greater than 1 are only valid for keys that are arrays. Use of this key is optional.</string>
+							<key>pfm_name</key>
+							<string>pfm_repetition_min</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>Value of the pfm_targets key specified in the next level up or user if the pfm_targets key is not specified in the next level up.</string>
+							<key>pfm_description</key>
+							<string>Specifies values that indicate when a preference is to be processed. Possible values are user, user-managed, and system-managed. For additional information, see </string>
+							<key>pfm_name</key>
+							<string>pfm_targets</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>user</string>
+								<string>system-managed</string>
+								<string>user-managed</string>
+							</array>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>Value of the pfm_name key.</string>
+							<key>pfm_description</key>
+							<string>Specifies the title of the preference, which is displayed by the Workgroup Manager’s Preference Manifest Editor. This key is optional, and if not specified, the Workgroup Manager’s Preference Manifest Editor displays the value of the pfm_name key as the title. See the section Localization for additional information about specifying the value of this key.</string>
+							<key>pfm_name</key>
+							<string>pfm_title</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string></string>
+							<key>pfm_description</key>
+							<string>Specifies the type of the preference, which can be a standard plist type (array, boolean, date, data, dictionary, integer, real, string, or url), union policy for MCX union policy manifest key definitions, or alias for a standard alias. This key is required and has no default.</string>
+							<key>pfm_name</key>
+							<string>pfm_type</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>union policy</string>
+								<string>boolean</string>
+								<string>url</string>
+								<string>string</string>
+								<string>real</string>
+								<string>array</string>
+								<string>date</string>
+								<string>integer</string>
+								<string>dictionary</string>
+								<string>data</string>
+								<string>alias</string>
+							</array>
+							<key>pfm_type</key>
+							<string>String</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>{pfm_name}</string>
+							<key>pfm_description</key>
+							<string>Specifies the input key names for a union policy manifest key. For additional information, see the section</string>
+							<key>pfm_name</key>
+							<string>pfm_upk_input_keys</string>
+							<key>pfm_type</key>
+							<string>array of strings</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string></string>
+							<key>pfm_description</key>
+							<string>Specifies the output key name for a union policy manifest key.</string>
+							<key>pfm_name</key>
+							<string>pfm_upk_output_name</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>false</string>
+							<key>pfm_description</key>
+							<string>Specifies whether to replace user preferences with the output of a union policy.</string>
+							<key>pfm_name</key>
+							<string>pfm_upk_output_replace</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>array</string>
+							<key>pfm_description</key>
+							<string>For union policy manifest keys, specifies whether to output an array or a dictionary. Use array to output an array or dictionary to output a dictionary.</string>
+							<key>pfm_name</key>
+							<string>pfm_upk_output_type</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>false</string>
+							<key>pfm_description</key>
+							<string>Specifies whether to remove duplicate keys when a union policy results in a combination of keys that contains duplicates.</string>
+							<key>pfm_name</key>
+							<string>pfm_upk_remove_duplicates</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>{}</string>
+							<key>pfm_description</key>
+							<string>Specifies that nested manifest keys follow. This key is optional and is only used for manifest keys that are dictionaries or arrays.</string>
+							<key>pfm_name</key>
+							<string>pfm_subkeys</string>
+							<key>pfm_type</key>
+							<string>array of dictionary</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>1</string>
+							<key>pfm_description</key>
+							<string>Specifies the use of the mcx_preference_version_n key, where n is a positive integer starting with 2. This key is optional.</string>
+							<key>pfm_name</key>
+							<string>pfm_mcx_version</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+						</dict>
+					</array>
+					<key>pfm_type</key>
+					<string>array of dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<string>1</string>
+					<key>pfm_description</key>
+					<string>Specifies the use of the mcx_preference_version_n key, where n is a positive integer starting with 2. This key is optional.</string>
+					<key>pfm_name</key>
+					<string>pfm_mcx_version</string>
+					<key>pfm_type</key>
+					<string>integer</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
